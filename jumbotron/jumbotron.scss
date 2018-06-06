@@ -1,0 +1,54 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/variables";
+.home-jumbotron {
+
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  &::before {
+    padding-top: percentage(9 / 21);
+    display: block;
+    content: "";
+  }
+  >video, >.home-jumbotron-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+  }
+  >video {
+    z-index: 0;
+  }
+  >.home-jumbotron-content {
+    z-index: 1;
+    // background-color:  rgba(255, 255, 255, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >.home-jumbotron-headline {
+      color: #FFF;
+      font-size: 2em;
+      width: 250px;
+      text-align: center;
+      font-family: "proxima-nova-semibold", "proxima-nova-1", "proxima-nova-2", sans-serif;
+      font-weight: 400;
+
+      @include media-breakpoint-up('sm') {
+        font-size: 3em;
+        width: 300px;
+      }
+      @include media-breakpoint-up('lg') {
+        font-size: 3.5em;
+        width: 500px;
+      }
+    }
+  }
+
+}
