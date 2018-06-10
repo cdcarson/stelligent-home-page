@@ -1,6 +1,6 @@
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/variables";
 .home-jumbotron {
 
   position: relative;
@@ -12,8 +12,14 @@
     padding-top: percentage(9 / 21);
     display: block;
     content: "";
+
   }
-  >video, >.home-jumbotron-content {
+  @include media-breakpoint-up('lg') {
+    &::before {
+      padding-top: percentage(9 / 21);
+    }
+  }
+  >video, >.home-jumbotron-content, >.home-jumbotron-mask {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -26,8 +32,12 @@
   >video {
     z-index: 0;
   }
-  >.home-jumbotron-content {
+  >.home-jumbotron-mask {
     z-index: 1;
+    background-color: rgba(0, 0, 0, .6);
+  }
+  >.home-jumbotron-content {
+    z-index: 2;
     // background-color:  rgba(255, 255, 255, .4);
     display: flex;
     justify-content: center;

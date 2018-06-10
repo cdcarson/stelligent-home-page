@@ -8,7 +8,10 @@
     padding-top: 42.85714%;
     display: block;
     content: ""; }
-  .home-jumbotron > video, .home-jumbotron > .home-jumbotron-content {
+  @media (min-width: 992px) {
+    .home-jumbotron::before {
+      padding-top: 42.85714%; } }
+  .home-jumbotron > video, .home-jumbotron > .home-jumbotron-content, .home-jumbotron > .home-jumbotron-mask {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -19,8 +22,11 @@
     margin: 0; }
   .home-jumbotron > video {
     z-index: 0; }
-  .home-jumbotron > .home-jumbotron-content {
+  .home-jumbotron > .home-jumbotron-mask {
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6); }
+  .home-jumbotron > .home-jumbotron-content {
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center; }

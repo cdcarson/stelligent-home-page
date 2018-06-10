@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 gulp.task('sass', function () {
   return gulp.src('./docs/jumbotron/jumbotron.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./jumbotron'));
+    .pipe(gulp.dest('./docs/jumbotron'));
 });
 
 gulp.task('sass:watch', function () {
