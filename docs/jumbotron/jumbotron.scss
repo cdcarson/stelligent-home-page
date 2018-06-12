@@ -6,6 +6,11 @@
 $lgBreakpoint: 1100px;
 $aspectRatio: 9 / 21;
 
+$nativeWidth: 1440px;
+$nativeHeight: $nativeWidth * $aspectRatio;
+
+$maxHeight: $lgBreakpoint * $aspectRatio;
+
 .home-jumbotron {
   background-color: #000;
   position: relative;
@@ -73,6 +78,80 @@ $aspectRatio: 9 / 21;
       height: $lgBreakpoint * $aspectRatio;
       left: 50%;
       margin-left: -1 * ($lgBreakpoint/2);
+    }
+  }
+
+}
+
+.home-jumbotron-2 {
+  background-color: #000;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  &::before {
+    padding-top: percentage($aspectRatio);
+    display: block;
+    content: "";
+  }
+
+
+  >video, >.home-jumbotron-content, >.home-jumbotron-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+  }
+  >video {
+    z-index: 0;
+  }
+  >.home-jumbotron-mask {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+
+
+  >.home-jumbotron-content {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >.home-jumbotron-headline {
+      color: #FFF;
+      font-size: 2em;
+      line-height: 1em;
+      width: 90%;
+      text-align: center;
+      font-family: "proxima-nova-semibold", "proxima-nova-1", "proxima-nova-2", sans-serif;
+      font-weight: 400;
+
+      @include media-breakpoint-up('sm') {
+        font-size: 3em;
+      }
+      @include media-breakpoint-up('lg') {
+        font-size: 3.5em;
+      }
+    }
+  }
+
+  @media (min-width: $lgBreakpoint) {
+    &::before {
+      padding-top: $lgBreakpoint * $aspectRatio;
+    }
+
+    >video {
+      width: $nativeWidth;
+      top: ($nativeHeight - $maxHeight)/-2;
+      left: ($nativeWidth - 1440px)/-2;
+      bottom: auto;
+      right: auto;
+      height: $nativeHeight;
     }
   }
 

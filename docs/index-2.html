@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://stelligent.com/xmlrpc.php">
+
+
+<title>Stelligent &#8211; DevOps on Amazon Web Services</title>
+
+<script type="text/javascript">
+  WebFontConfig = {"typekit":{"id":"rhb1zdi"}};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://stelligent.com/wp-content/mu-plugins/wpcomsh/vendor/automattic/custom-fonts/js/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+	})();
+</script>
+
+<link rel='stylesheet' id='wpcom-text-widget-styles-css'  href='https://stelligent.com/wp-content/mu-plugins/wpcomsh/vendor/automattic/text-media-widget-styles/css/widget-text.css?ver=20170607' type='text/css' media='all' />
+<link rel='stylesheet' id='stelligent_gdpr_notice_bs-css'  href='https://stelligent.com/wp-content/plugins/stelligent-gdpr/styles.min.css?ver=2.09' type='text/css' media='all' />
+<link rel='stylesheet' id='stelligent_gdpr_notice-css'  href='https://stelligent.com/wp-content/plugins/stelligent-gdpr/stelligent-gdpr.css?ver=2.09' type='text/css' media='all' />
+<link rel='stylesheet' id='ult_marketo_forms-css'  href='https://stelligent.com/wp-content/plugins/ultimate-marketo-forms/public/css/ult_marketo_forms-public.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='a8c-wpcom-masterbar-css'  href='https://s1.wp.com/wp-content/mu-plugins/admin-bar/wpcom-admin-bar.css?ver=6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='a8c-wpcom-masterbar-overrides-css'  href='https://s0.wp.com/wp-content/mu-plugins/admin-bar/masterbar-overrides/masterbar.css?ver=6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='a8c_wpcom_css_override-css'  href='https://stelligent.com/wp-content/plugins/jetpack/modules/masterbar/overrides.css?ver=6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='noticons-css'  href='//s0.wp.com/i/noticons/noticons.css?ver=20120621' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://stelligent.com/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='shoreditch-fonts-css'  href='https://fonts.googleapis.com/css?family=Poppins%3A400%2C700%7CLato%3A400%2C700%2C400italic%2C700italic%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='shoreditch-style-css'  href='https://stelligent.com/wp-content/themes/stelligent/style.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='shoreditch-wpcom-css'  href='https://stelligent.com/wp-content/themes/shoreditch/inc/style-wpcom.css?ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-widget-social-icons-styles-css'  href='https://stelligent.com/wp-content/plugins/jetpack/modules/widgets/social-icons/social-icons.css?ver=20170506' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://stelligent.com/wp-content/plugins/jetpack/css/jetpack.css?ver=6.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://stelligent.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://app-abk.marketo.com/js/forms2/js/forms2.min.js?ver=2.09'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/plugins/ultimate-marketo-forms/public/js/forms2.min.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/plugins/ultimate-marketo-forms/public/js/ult_marketo_forms-public.js?ver=1.0.1'></script>
+<script type='text/javascript' src='//munchkin.marketo.net/munchkin.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/plugins/jetpack/_inc/build/accessible-focus.min.js?ver=6.2'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/plugins/jetpack/_inc/build/masterbar/tracks-events.min.js?ver=6.2'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/admin-bar/masterbar-overrides/masterbar.js?ver=6.2'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/plugins/jetpack/_inc/build/postmessage.min.js?ver=6.2'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/plugins/jetpack/_inc/build/jquery.jetpack-resize.min.js?ver=6.2'></script>
+<link rel='https://api.w.org/' href='https://stelligent.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://stelligent.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://stelligent.com/wp-includes/wlwmanifest.xml" />
+
+<link rel="canonical" href="https://stelligent.com/" />
+<link rel='shortlink' href='https://wp.me/P7vpzx-2' />
+<link rel="alternate" type="application/json+oembed" href="https://stelligent.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstelligent.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://stelligent.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstelligent.com%2F&#038;format=xml" />
+
+
+	<meta name="description" content="Continuous Delivery on AWS Stelligent is a technology services company that provides DevOps Automation on the Amazon Web Services (AWS) cloud. We embed with your teams to achieve these and more aims, and do so in a way that leaves all the intellectual property safe with you. How can we help? Speed Want to speed&hellip;" />
+	<style type="text/css">
+			.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<!-- <style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style> -->
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Stelligent" />
+<meta property="og:description" content="DevOps on Amazon Web Services" />
+<meta property="og:url" content="https://stelligent.com/" />
+<meta property="og:site_name" content="Stelligent" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="Stelligent" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+
+
+<link rel="stylesheet"  href="jumbotron/jumbotron.css" type='text/css' media='all' />
+
+<!-- [BEGIN] Scripts added via Head-and-Footer-Scripts-Inserter plugin by Space X-Chimp ( https://www.spacexchimp.com ) -->
+<style>
+a.brand-prompt, a.brand-prompt:hover, a.brand-prompt:active {
+  display: inline-block;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  color: #fff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  background-color:  #F4842B;
+
+}
+
+.case-study {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #999;
+}
+.case-study::after{
+  display: block;
+   content: "";
+   clear: both;
+}
+
+.case-study > h3 {
+  margin: 0 0 .5rem 0;
+}
+
+.case-study > .floated-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+.case-study > .floated-right.floated-youtube {
+  float: none;
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+
+
+
+@media (min-width: 768px) {
+  .case-study > .floated-right.floated-youtube {
+    float: right;
+    width: 350px;
+    margin: 0 0 1rem 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .case-study > .floated-right.floated-youtube {
+    width: 480px;
+  }
+}
+
+.marketo-form-container {
+  width: 300px;
+  padding: 16px;
+  border: 3px solid #F4842B;
+  margin-bottom: 1em;
+}
+
+.marketo-img-container {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 480px) {
+  .marketo-form-container {
+    width: 460px;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .marketo-form-container {
+    width: 400px;
+    float: right;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+  .marketo-img-container {
+    float:left;
+    margin-bottom: 1em;
+    width: 310px;
+  }
+}
+.page-id-4 .hentry-wrapper {
+    text-align: left !important;
+}
+
+</style>
+
+<!-- [END] Scripts added via Head-and-Footer-Scripts-Inserter plugin by Space X-Chimp ( https://www.spacexchimp.com ) -->
+
+</head>
+
+<body class="home page-template page-template-full-width-page page-template-full-width-page-php page page-id-2 logged-in admin-bar no-customize-support wp-custom-logo group-blog sticky-header no-sidebar">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-wrapper">
+			<div class="site-branding">
+				<a href="https://stelligent.com/" class="custom-logo-link" rel="home" itemprop="url"><img width="240" height="66" src="https://i1.wp.com/stelligent.com/wp-content/uploads/2018/02/cropped-2018stelligent-logo_RGB-1.png?fit=240%2C66&amp;ssl=1" class="custom-logo" alt="Stelligent" itemprop="logo" srcset="https://i1.wp.com/stelligent.com/wp-content/uploads/2018/02/cropped-2018stelligent-logo_RGB-1.png?w=240&amp;ssl=1 240w, https://i1.wp.com/stelligent.com/wp-content/uploads/2018/02/cropped-2018stelligent-logo_RGB-1.png?resize=150%2C41&amp;ssl=1 150w" sizes="(max-width: 240px) 100vw, 240px" data-attachment-id="17586" data-permalink="https://stelligent.com/cropped-2018stelligent-logo_rgb-1-png/" data-orig-file="https://i1.wp.com/stelligent.com/wp-content/uploads/2018/02/cropped-2018stelligent-logo_RGB-1.png?fit=240%2C66&amp;ssl=1" data-orig-size="240,66" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cropped-2018stelligent-logo_RGB-1.png" data-image-description="&lt;p&gt;https://stelligent.com/wp-content/uploads/2018/02/cropped-2018stelligent-logo_RGB-1.png&lt;/p&gt;
+" data-medium-file="https://i1.wp.com/stelligent.com/wp-content/uploads/2018/02/cropped-2018stelligent-logo_RGB-1.png?fit=240%2C66&amp;ssl=1" data-large-file="https://i1.wp.com/stelligent.com/wp-content/uploads/2018/02/cropped-2018stelligent-logo_RGB-1.png?fit=240%2C66&amp;ssl=1" /></a>
+									<p class="site-title"><a href="https://stelligent.com/" rel="home">Stelligent</a></p>
+								<p class="site-description">DevOps on Amazon Web Services</p>
+			</div><!-- .site-branding -->
+
+							<button id="menu-toggle" class="menu-toggle">Menu</button>
+				<div id="site-menu" class="site-menu">
+					<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55"><a href="https://stelligent.com/services/">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="https://stelligent.com/services/preparation/">Road Map</a></li>
+	<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57"><a href="https://stelligent.com/services/automation/">Automate</a></li>
+	<li id="menu-item-6278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6278"><a href="https://stelligent.com/services/security/">Secure</a></li>
+	<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="https://stelligent.com/services/management/">Manage</a></li>
+	<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="https://stelligent.com/services/30-day-pipeline/">30-Day Pipeline</a></li>
+	<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="https://stelligent.com/services/ci-in-aws/">CI in AWS</a></li>
+	<li id="menu-item-12196" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12196"><a target="_blank" href="http://hosting.com">HOSTING Managed Services</a></li>
+</ul>
+</li>
+<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-117"><a href="https://stelligent.com/resources/">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a href="https://stelligent.com/resources/devops-in-aws-solutions/">DevOps on AWS Solutions</a></li>
+	<li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="https://stelligent.com/resources/tools-we-frequently-use/">Tools We Use</a></li>
+	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="https://stelligent.com/resources/glossary/">Glossary</a></li>
+</ul>
+</li>
+<li id="menu-item-16695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16695"><a href="https://stelligent.com/industries/">Industries</a>
+<ul class="sub-menu">
+	<li id="menu-item-16698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16698"><a href="https://stelligent.com/financial-services/">Financial Services</a></li>
+	<li id="menu-item-16696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16696"><a href="https://stelligent.com/government/">Government</a></li>
+	<li id="menu-item-16697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16697"><a href="https://stelligent.com/healthcare/">Healthcare &#038; Life Sciences</a></li>
+</ul>
+</li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="https://stelligent.com/case-studies/">Case Studies</a></li>
+<li id="menu-item-17499" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17499"><a href="https://stelligent.com/white-papers/">White Papers</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://stelligent.com/blog/">Blog</a></li>
+<li id="menu-item-11359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11359"><a href="https://stelligent.com/careers/">Careers</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-52"><a href="https://stelligent.com/about/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-17390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17390"><a href="https://stelligent.com/news-events/">News &#038; Events</a></li>
+	<li id="menu-item-12198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12198"><a href="https://stelligent.com/faqs/">HOSTING + Stelligent FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a href="https://stelligent.com/contact/">Contact Stelligent</a></li>
+</ul></div>					</nav><!-- .main-navigation -->
+				</div><!-- .site-menu -->
+								</div><!-- .site-header-wrapper -->
+	</header><!-- #masthead -->
+
+
+
+	<div id="content" class="site-content">
+    <div class="home-jumbotron-2">
+      <video loop="true" autoplay="autoplay" muted="muted">
+        <source src="stelligent_homepage_banner_bkgrnd.webm" type="video/webm">
+          <source src="stelligent_homepage_banner_bkgrnd.mp4" type="video/mp4">
+            <source src="stelligent_homepage_banner_bkgrnd.ogv" type="video/ogv">
+        Sorry, your browser doesn't support embedded videos,
+        but don't worry, you can <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
+        and watch it with your favorite video player!
+      </video>
+      <div class="home-jumbotron-mask"></div>
+      <div class="home-jumbotron-content">
+        <div class="home-jumbotron-headline">
+          Continuous <br> Delivery on AWS
+        </div>
+      </div>
+    </div>
+
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+
+<article id="post-2" class="post-2 page type-page status-publish hentry">
+	<div class="hentry-wrapper">
+					<header class="entry-header" >
+				<div class="entry-header-wrapper">
+									</div><!-- .entry-header-wrapper -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+
+<p class="small " style="text-align: center; padding-bottom: 40px;">Stelligent is a technology services company that provides DevOps Automation on the Amazon Web Services (AWS) cloud. We embed with your teams to achieve these and more aims, and do so in a way that leaves all the intellectual property safe with you. <a href="https://stelweb.wordpress.com/services/">How can we help?</a></p>
+<div class="article-col-home">
+<div class="staytogether">
+<h4>Speed</h4>
+<p class="small">Want to speed up your software delivery process?</p>
+</div>
+<div class="staytogether">
+<h4>Confidence</h4>
+<p class="small">Want to increase confidence in what gets delivered?</p>
+</div>
+<div class="staytogether">
+<h4>Experimentation</h4>
+<p class="small">Want to increase your ability to experiment?</p>
+</div>
+</div>
+<div class="article-col-home">
+<div class="staytogether">
+<h4>Self Service</h4>
+<p class="small">Want to enable your teams able to self serve environment resources?</p>
+</div>
+<div class="staytogether">
+<h4>Security</h4>
+<p class="small">Want to ensure your systems meet and exceed security and audit requirements?</p>
+</div>
+<div class="staytogether">
+<h4>Cost Savings</h4>
+<p class="small">Want to get a handle on runaway environment costs?</p>
+</div>
+</div>
+<div style="text-align=center; margin: 24px 0">
+<img style="max-width: 200px" title="APN Premier Consulting Partner" src="https://i2.wp.com/stelligent.com/wp-content/uploads/2017/12/FinancialServicesCompetency_DevOpsCompetency_MSPPartner_PublicSectorPartner.png?w=900&#038;ssl=1" alt="APN Premier Consulting Partner" data-recalc-dims="1" />
+</div>
+		</div><!-- .entry-content -->
+
+		<footer class="entry-footer"><span class="edit-link"><a class="post-edit-link" href="https://wordpress.com/page/stelligent.com/2">Edit </a></span></footer><!-- .entry-footer -->	</div><!-- .hentry-wrapper -->
+</article><!-- #post-## -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="tertiary" class="widget-area widget-footer" role="complementary">
+		<div class="widget-footer-area widget-footer-top-area column-1">
+		<div class="widget-area-wrapper">
+					<section id="recent-posts-3" class="widget widget_recent_entries">		<h2 class="widget-title">Automation For The People</h2>		<ul>
+											<li>
+					<a href="https://stelligent.com/2018/05/25/serverless-cloudformation-linting-in-aws-codepipeline/">Serverless CloudFormation Linting in AWS CodePipeline</a>
+											<span class="post-date">May 25, 2018</span>
+									</li>
+											<li>
+					<a href="https://stelligent.com/2018/05/01/the-devops-culture-empowering-your-team/">The DevOps Culture: Empowering Your Team</a>
+											<span class="post-date">May 1, 2018</span>
+									</li>
+											<li>
+					<a href="https://stelligent.com/2018/04/20/devops-on-aws-radio-washington-post-patrick-cullen-episode-14/">DevOps on AWS Radio: Washington Post &#8211; Patrick Cullen (Episode 14)</a>
+											<span class="post-date">April 20, 2018</span>
+									</li>
+											<li>
+					<a href="https://stelligent.com/2018/04/19/continuous-delivery-for-microservices-on-ec2-with-mu/">Continuous Delivery for Microservices on EC2 with mu</a>
+											<span class="post-date">April 19, 2018</span>
+									</li>
+											<li>
+					<a href="https://stelligent.com/2018/04/09/automating-aws-cloud9/">Automating AWS Cloud9</a>
+											<span class="post-date">April 9, 2018</span>
+									</li>
+					</ul>
+		</section>		</div><!-- .widget-area-wrapper-area -->
+	</div><!-- .widget-footer-full-width -->
+
+		<div class="widget-footer-area widget-footer-bottom-area column-1">
+		<div class="widget-area-wrapper">
+			<section id="text-6" class="widget widget-small widget_text">			<div class="textwidget"><img src="https://i2.wp.com/stelligent.com/wp-content/uploads/2018/02/2018stelligent-logo_RGB.png?w=120&#038;ssl=1"  alt="Stelligent"  data-recalc-dims="1"></img>
+
+<br>
+<p style="padding-top:12px;">
+&copy; Copyright 2018 Stelligent. All Rights Reserved.
+<br>
+<a href="mailto:info@stelligent.com?Subject=Stelligent%20HomePage" target="_top">info@stelligent.com</a> | <a href="stelligent.com/blog">Blog</a> | <a href="http:///hosting.com" target="_blank">HOSTING</a> | <a href="stelligent.com/terms">Terms of Use</a> | <a href="stelligent.com/privacy">Privacy Statement</a>
+
+</p>
+</div>
+		</section>		</div><!-- .widget-area-wrapper -->
+	</div><!-- .widget-footer-area -->
+	</aside><!-- #tertiary -->
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-footer-wrapper">
+					<nav class="jetpack-social-navigation jetpack-social-navigation-genericons" role="navigation" aria-label="Social Links Menu">
+			<div class="menu-social-links-container"><ul id="menu-social-links" class="menu"><li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="http://facebook.com"><span class="screen-reader-text">Menu Item</span></a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="http://twitter.com"><span class="screen-reader-text">Menu Item</span></a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="http://instagram.com"><span class="screen-reader-text">Menu Item</span></a></li>
+</ul></div>		</nav><!-- .jetpack-social-navigation -->
+
+			<div class="site-info">
+				<a href="https://wordpress.com/?ref=footer_custom_powered">Powered by WordPress.com</a>.
+
+				Theme: Shoreditch by <a href="https://wordpress.com/themes/" rel="designer">Automattic</a>.			</div><!-- .site-info -->
+		</div><!-- .site-footer-wrapper -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+
+
+
+
+
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var shoreditchButtonTitle = {"desc":"Back to top"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/themes/shoreditch/js/back-top.js?ver=20120206'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/themes/shoreditch/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var shoreditchScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/themes/shoreditch/js/navigation.js?ver=20151231'></script>
+<script type='text/javascript' src='https://stelligent.com/wp-content/themes/shoreditch/js/header.js?ver=20130115'></script>
+
+
+
+
+
+
+
+<!-- [END] Scripts added via Head-and-Footer-Scripts-Inserter plugin by Space X-Chimp ( https://www.spacexchimp.com ) -->
+
+
+</body>
+</html>
