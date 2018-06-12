@@ -105,3 +105,24 @@
       bottom: auto;
       right: auto;
       height: 617.14286px; } }
+
+.home-page-features > .home-page-feature {
+  display: inline-block;
+  border-top: 1px solid #d5d5d5;
+  padding: 22px 10px 10px 10px;
+  font-size: .8em;
+  width: 100%; }
+  .home-page-features > .home-page-feature h4 {
+    font-weight: 400; }
+
+@media (min-width: 576px) {
+  .home-page-features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .home-page-features > .home-page-feature {
+      width: 45%; } }
+
+@media (min-width: 992px) {
+  .home-page-features > .home-page-feature {
+    width: 30%; } }
