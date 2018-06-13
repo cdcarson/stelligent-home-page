@@ -137,6 +137,10 @@ $maxHeight: $lgBreakpoint * $aspectRatio;
       @include media-breakpoint-up('lg') {
         font-size: 3.5em;
       }
+      .c2a {
+        margin-top: .5em;
+
+      }
     }
   }
 

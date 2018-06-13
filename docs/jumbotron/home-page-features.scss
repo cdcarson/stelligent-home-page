@@ -1,0 +1,28 @@
+.home-page-features {
+  >.home-page-feature {
+    display: inline-block;
+    border-top: 1px solid #d5d5d5;
+    padding: 22px 10px 10px 10px;
+    font-size: .8em;
+    width: 100%;
+    h4 {
+      font-weight: 400;
+    }
+
+  }
+
+  @include media-breakpoint-up('sm') {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    >.home-page-feature {
+      width: 45%;
+    }
+  }
+  @include media-breakpoint-up('lg') {
+    >.home-page-feature {
+      width: 30%;
+    }
+  }
+
+}

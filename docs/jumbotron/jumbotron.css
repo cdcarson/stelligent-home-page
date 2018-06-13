@@ -95,6 +95,8 @@
       @media (min-width: 992px) {
         .home-jumbotron-2 > .home-jumbotron-content > .home-jumbotron-headline {
           font-size: 3.5em; } }
+      .home-jumbotron-2 > .home-jumbotron-content > .home-jumbotron-headline .c2a {
+        margin-top: .5em; }
   @media (min-width: 1100px) {
     .home-jumbotron-2::before {
       padding-top: 471.42857px; }
