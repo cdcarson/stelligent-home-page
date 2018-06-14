@@ -1,0 +1,463 @@
+/*
+Theme Name: Stelligent Version 2
+Theme URI: http://stelligent.com
+Description: A child theme of Shoreditch (https://wordpress.com/themes/shoreditch/,) with minor customizations.
+Author: Chris Carson <chris@nowzoo.com>
+Template: shoreditch
+Version: 2.0.0
+*/
+@import "../shoreditch/style.css";
+
+.stelligent-home-page{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+.stelligent-home-page > .inner {
+	max-width: 800px;
+    margin: 0;
+    padding-top: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+
+
+.stelligent-article-header > a.stelligent-article-header-link {
+	display: block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	padding-top: 150px;
+}
+
+.stelligent-article-header > .stelligent-article-header-meta {
+	font-size: 14px;
+	color: #666;
+	margin: .5rem 0;
+}
+
+.stelligent-article-header > a.stelligent-article-header-link > h2 {
+	margin: 0;
+	padding: 16px 32px;
+	background: rgba(0, 0, 0, 0.6);
+	color: #FFF;
+	font-weight: normal;
+	font-size: 30px;
+}
+
+.post-list>article.hentry .entry-content p:last-child {
+	margin: 0;
+}
+
+
+
+.archive .content-area .hentry, .blog .content-area .hentry, .search .content-area .hentry {
+
+	margin-top: 4rem;
+	padding-top: 0;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #F3F3F3;
+}
+
+.archive .content-area .hentry:first-child {
+	margin-top: 0rem;
+}
+
+h1.entry-title {
+	font-weight: normal;
+}
+
+/* copied from original wordpress.com CSS option... */
+/*
+Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt
+*/
+.widget-title {
+	color: #666;
+}
+
+.author-bio {
+	display: none;
+}
+
+.sd-title {
+	font-size: 12px !important;
+}
+
+div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
+	position: fixed;
+	top: 145px;
+	left: 40px;
+	z-index: 999;
+	display: inline-block;
+	height: 190px;
+	width: 58px;
+	padding: 10px;
+	padding-top: 0;
+	border: 1px solid #dadada;
+	font-size: 26px;
+}
+
+@media screen and (max-width: 1200px) {
+	div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
+		position: relative;
+		clear: both;
+		border: 0;
+		width: auto;
+		height: auto;
+		padding: 0;
+		top: 0;
+		left: 0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.entry-author {
+	}
+
+	.archive .page-title {
+		padding-bottom: 0 !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.entry-author {
+	}
+
+	.single-post .entry-title {
+		margin-top: 80px !important;
+	}
+
+	.blog .content-area {
+		padding-top: .5em !important;
+	}
+}
+
+.entry-author {
+}
+
+.author-title, .author-bio {
+}
+
+.author-avatar {
+	float: left;
+	padding: 0;
+	padding-right: 20px;
+	margin: 0;
+}
+
+.author-avatar img {
+	height: 40px;
+	width: 40px;
+}
+
+.author-name {
+	font-size: 100%;
+	padding-top: 8px;
+	color: #666;
+}
+
+.single-post .content-area {
+	width: 100% !important;
+	padding: 0;
+}
+
+.single-post .entry-title {
+	font-size: 200%;
+	letter-spacing: -1px;
+	margin-top: 40px;
+}
+
+.archive .page-title {
+	font-size: 75%;
+	font-weight: bold;
+	color: #666;
+	padding-bottom: 4em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.loggedout-follow-normal {
+	display: none;
+}
+
+.blog .content-area {
+	padding-top: 5em;
+}
+
+.blog .hentry, .archive .hentry {
+	padding-top: .5em !important;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #dadada !important;
+}
+
+#bit {
+	display: none !important;
+}
+
+.sd-social-icon-text .sd-content ul li a.sd-button {
+	text-decoration: none !important;
+	display: inline-block;
+	margin: 0 15px 15px 0;
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: normal;
+	border-radius: 1px;
+	color: #000 !important;
+	background: #fff;
+	border: 1px solid #CCC;
+	box-shadow: 0 1px 0 rgba(0,0,0,.08);
+	text-shadow: none;
+	line-height: 23px;
+	padding: 8px 15px;
+}
+
+.dropdown-toggle {
+	border: .25em solid;
+	border-radius: 15%;
+	font-size: 16px;
+	font-size: 1rem;
+	height: 1.8em;
+	line-height: .5;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	text-transform: none;
+	top: .25em;
+	width: 2.5em;
+}
+
+.site-content-wrapper .widget-area {
+	border-top-color: #fff;
+}
+
+.post-115 a {
+}
+
+.entry-author {
+}
+
+p {
+	line-height: 1.8;
+	font-size: 18px;
+	color: #666;
+}
+
+.wf-active .comment-reply-title, .wf-active .comments-title, .wf-active h2:not(.author-title) {
+	padding-top: 20px;
+}
+
+span.tags-links {
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 1px;
+	display: inline-block;
+	clear: both;
+	padding-top: 10px;
+	font-weight: 400;
+	color: #666;
+}
+
+span.comments-link {
+	display: none;
+}
+
+.entry-title {
+	font-weight: 400 !important;
+	font-weight: normal;
+}
+
+.wf-active h4 {
+	font-weight: 400 !important;
+	font-weight: normal;
+}
+
+#text-14 a {
+	text-decoration: underline;
+}
+
+.widget-footer-area {
+	background: #fafafa;
+}
+
+.site-footer {
+	height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.widget-footer-area p {
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+}
+
+.home .staytogether {
+	display: inline;
+	border-top: 1px solid #d5d5d5;
+	margin-bottom: 2px;
+	padding: 10px;
+	padding-bottom: 0;
+	padding-top: 22px;
+	font-size: 80%;
+}
+
+.staytogether {
+	float: left;
+	display: inline;
+	clear: left;
+}
+
+pre {
+	font-size: 13px;
+	color: blue;
+}
+
+.entry-meta {
+	display: none;
+}
+
+.cat-links a {
+	display: none;
+}
+
+.entry-footer {
+	padding: 0;
+}
+
+.post-date {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0;
+}
+
+a {
+	-webkit-transition: all .21s ease-in-out;
+	-moz-transition: all .21s ease-in-out;
+	-o-transition: all .21s ease-in-out;
+	transition: all .21s ease-in-out;
+}
+
+.main-navigation a {
+	font-size: 13px;
+}
+
+.main-navigation .primary-menu > li > a {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	font-weight: 400;
+}
+
+.article-col {
+	-webkit-columns: 2 200px;
+	-moz-columns: 2 200px;
+	columns: 2 200px;
+	-webkit-column-gap: 4em;
+	-moz-column-gap: 4em;
+	column-gap: 4em;
+	padding-bottom: 12px;
+}
+
+.article-col-home {
+	-webkit-columns: 3 190px;
+	-moz-columns: 3 190px;
+	columns: 3 190px;
+	-webkit-column-gap: 1em;
+	-moz-column-gap: 1em;
+	column-gap: 1em;
+}
+
+.home-desc {
+	position: Relative;
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.small, .font_small {
+	font-size: 95%;
+}
+
+.blog .entry-title {
+	font-size: 150%;
+}
+
+.archive .entry-title {
+	font-size: 150%;
+}
+
+.entry-footer {
+	margin-top: -20px;
+}
+
+#post-2 {
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+
+.page-id-4 .hentry-wrapper {
+	text-align: Center;
+}
+
+.page-id-4 .site-content .contact-form input {
+	max-width: 400px;
+}
+
+.page-id-4 .site-content .contact-form textarea {
+	max-width: 400px;
+}
+
+.site-info a {
+	display: none;
+}
+
+.custom-logo {
+	max-width: 120px;
+}
+
+#text-12 img {
+	margin-bottom: 20px;
+	width: 80px;
+}
+
+.entry-title {
+	margin-top: 0;
+}
+
+.widget-footer {
+	text-align: center;
+}
+
+.widget-footer-top-area {
+	background-color: #3a3b40;
+}
+
+.widget-footer-top-area a {
+	color: #fafa;
+}
+
+.widget-small h3 {
+	margin-bottom: 2px;
+}
+
+.widget-small h3 a {
+	text-decoration: underline;
+}
+
+.menu-item-54 a {
+	color: #f4842b;
+}
+
+.menu-item-54 {
+	padding-left: 14px;
+}
+
+.gist .blob-num {
+	width: 30px !important;
+}
